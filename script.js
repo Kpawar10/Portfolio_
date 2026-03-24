@@ -43,8 +43,3 @@ document.addEventListener("DOMContentLoaded", function () {
 
     typeEffect();
 });
-
-<div class="project-links">
-    <a href="#" class="btn">GitHub</a>
-    <a href="#" class="btn">Live Demo</a>
-</div>
