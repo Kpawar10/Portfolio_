@@ -43,3 +43,43 @@ document.addEventListener("DOMContentLoaded", function () {
 
     typeEffect();
 });
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+        }
+    });
+}, {
+    threshold: 0.2
+});
+
+document.querySelectorAll('.project-row, .timeline-item, .skills-box')
+.forEach(el => {
+    el.classList.add('hidden');
+    observer.observe(el);
+});
+// LOADER
+window.addEventListener("load", () => {
+    const loader = document.getElementById("loader");
+
+    setTimeout(() => {
+        loader.classList.add("hidden");
+    }, 2000); // matches animation time
+});
+
+particlesJS("particles-js", {
+  particles: {
+    number: { value: 80 },
+    size: { value: 2 },
+    move: { speed: 0.6 },
+    line_linked: { enable: false },
+    opacity: { value: 0.5 }
+  }
+});
+window.addEventListener("load", () => {
+  const loader = document.getElementById("loader");
+
+  setTimeout(() => {
+    loader.classList.add("hidden");
+  }, 2000);
+});
