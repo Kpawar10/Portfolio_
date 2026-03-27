@@ -821,3 +821,13 @@ section {
 .timeline-content {
     animation: softFloat 6s ease-in-out infinite;
 }
+body::after {
+    content: "";
+    position: fixed;
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle, rgba(119,219,196,0.2), transparent);
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+}
