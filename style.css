@@ -840,4 +840,4 @@ body::after {
     transform: translate(-50%, -50%);
     z-index: 0;
     transition: transform 0.05s linear;
-}
+} 
